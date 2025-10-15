@@ -16,4 +16,10 @@ jobs:
         run: echo "::error title=Error title,file=app.js,line=10,endLine=10,col=15,endColumn=18::Missing semicolon"
         # How to create a warning message
       - name: Setting a warning message
-        run: echo "::warning title=Usage of deprecated function,file=app.js,line=22::Deprecated function"
+        run: echo "::warning title=Warning title. Usage of deprecated function,file=app.js,line=22::Deprecated function"
+        # How to create a debug message
+      - name: Setting a debug message
+        run: echo "::debug title=Debug title. Usage of deprecated function,file=app.js,line=22::Deprecated function"
+        # How to create a notice message
+      - name: Setting a notice message
+        run: echo "::notice title=Notice title. Usage of deprecated function,file=app.js,line=22::Deprecated function"
