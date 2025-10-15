@@ -23,3 +23,15 @@ jobs:
         # How to create a notice message
       - name: Setting a notice message
         run: echo "::notice title=Notice title. Usage of deprecated function,file=app.js,line=7::Deprecated function"
+
+  grouping-logs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Group of logs
+        run: |
+          echo "::group::Shiju's group"
+          echo "Shiju Paul"
+          echo "Jeena Rose Shiju"
+          echo "Joel Joseph"
+          echo "Joshua Joseph"
+          echo "::endgroup::"
