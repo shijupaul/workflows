@@ -6,5 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         # How to pass error message from the workflow to the runner
+        # workflow will still pass, but the error message will be visible in the logs
       - name: Setting an error message
         run: echo "::error::Missing semicolon"
+
+        # These are parameters --> file=app.js,line=10,col=15
+      - name: Setting an error message with parameters
+        run: echo "::error title=Error title,file=app.js,line=10,endLine=20,col=15,endColumn=18::Missing semicolon"
+        # How to create a warning message
+      - name: Setting a warning message
+        run: echo "::warning title=Usage of deprecated function,file=app.js,line=22::Deprecated function"
