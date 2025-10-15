@@ -13,13 +13,13 @@ jobs:
         # These are parameters --> file=app.js,line=10,col=15
         # 'col' and 'endColumn' cannot be set if 'line' and 'endLine' are different values
       - name: Setting an error message with parameters
-        run: echo "::error title=Error title,file=app.js,line=10,endLine=10,col=15,endColumn=18::Missing semicolon"
+        run: echo "::error title=Error title,file=app.js,line=3,endLine=3,col=5,endColumn=18::Missing semicolon"
         # How to create a warning message
       - name: Setting a warning message
-        run: echo "::warning title=Warning title. Usage of deprecated function,file=app.js,line=22::Deprecated function"
+        run: echo "::warning title=Warning title. Usage of deprecated function,file=app.js,line=6::Deprecated function"
         # How to create a debug message
       - name: Setting a debug message
-        run: echo "::debug title=Debug title. Usage of deprecated function,file=app.js,line=22::Deprecated function"
+        run: echo "::debug title=Debug title. Usage of deprecated function,file=app.js,line=5::Deprecated function"
         # How to create a notice message
       - name: Setting a notice message
-        run: echo "::notice title=Notice title. Usage of deprecated function,file=app.js,line=22::Deprecated function"
+        run: echo "::notice title=Notice title. Usage of deprecated function,file=app.js,line=7::Deprecated function"
