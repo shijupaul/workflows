@@ -43,3 +43,8 @@ jobs:
         run: echo "12345"
       - name: Secret with masking
         run: echo "::add-mask::12345"
+      - name: Avoiding issues with masked value command printing
+        run: |
+          SECRET_TOKEN=$(echo 12345)
+          echo "::add-mask::$SECRET_TOKEN"
+          echo "Secret token appears as $SECRET_TOKEN in the logs"
