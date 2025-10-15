@@ -36,10 +36,10 @@ jobs:
           echo "Joshua Joseph"
           echo "::endgroup::"
 
-  mashing-values:
+  masking-values:
     runs-on: ubuntu-latest
     steps:
-      - name: Secret without mashing
+      - name: Secret without masking
         run: echo "12345"
-      - name: Secret with mashing
+      - name: Secret with masking
         run: echo "::add-mask::12345"
