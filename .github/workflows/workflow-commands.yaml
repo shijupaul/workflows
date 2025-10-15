@@ -1,0 +1,10 @@
+name: Workflow commands
+on: [push]
+
+jobs:
+  testing-workflow-commands:
+    runs-on: ubuntu-latest
+    steps:
+        # How to pass error message from the workflow to the runner
+      - name: Setting an error message
+        run: echo "::error::Missing semicolon"
