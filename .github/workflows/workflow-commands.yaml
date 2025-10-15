@@ -11,8 +11,9 @@ jobs:
         run: echo "::error::Missing semicolon"
 
         # These are parameters --> file=app.js,line=10,col=15
+        # 'col' and 'endColumn' cannot be set if 'line' and 'endLine' are different values
       - name: Setting an error message with parameters
-        run: echo "::error title=Error title,file=app.js,line=10,endLine=20,col=15,endColumn=18::Missing semicolon"
+        run: echo "::error title=Error title,file=app.js,line=10,endLine=10,col=15,endColumn=18::Missing semicolon"
         # How to create a warning message
       - name: Setting a warning message
         run: echo "::warning title=Usage of deprecated function,file=app.js,line=22::Deprecated function"
